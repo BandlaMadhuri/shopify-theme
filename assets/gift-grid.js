@@ -9,7 +9,6 @@ class GiftGuideGrid {
     this.bindEvents();
   }
 
-  // Create popup container
   createPopup() {
     this.popup = document.createElement("div");
     this.popup.classList.add("gift-popup");
