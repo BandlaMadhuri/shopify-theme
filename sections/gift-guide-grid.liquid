@@ -1,0 +1,70 @@
+{{ 'gift-guide-grid.css' | asset_url | stylesheet_tag }}
+
+<section class="gift-guide-grid">
+    <div class="gift-grid-container">
+        {% for i in (1..6) %}
+            {% assign setting_key = 'product_' | append: i %}
+            {% assign product_id = section.settings[setting_key] %}
+                {%  if product_id != blank %}
+                    {% assign product = all_products[product_id] %}
+                   <div class="gift-grid-item">
+                   <img src="{{ product.featured_image | image_url: width: 500, height: 500, crop: 'center' }}"
+                   alt="{{ product.title }}"
+                   class="gift-grid-image"
+                >
+                <div class="gift-grid-overlay">
+                    <h3>{{ product.title }}</h3>
+                    <p>{{ product.price | money }}</p>
+                    <button class="view-product" data-handle="{{ product.handle }}">
+                        view Product
+                    </button>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+</section>
+
+{% schema %}
+{
+"name": "Gift Guide Grid",
+"settings": [
+    {
+     "type": "product",
+     "id": "product_1",
+     "label": "Product 1"
+    },
+    {
+    "type": "product",
+    "id": "product_2",
+    "label": "Product 2"
+    },
+    {
+    "type": "product",
+    "id": "product_3",
+    "label": "Product 3"
+    },
+    {
+    "type": "product",
+    "id": "product_4",
+    "label": "Product 4"
+    },
+    {
+    "type": "product",
+    "id": "product_5",
+    "label": "Product 5"
+    },
+    {
+    "type": "product",
+    "id": "product_6",
+    "label": "Product 6"
+    }
+],
+"presets": [
+    {
+     "name": "Gift Guide Grid",
+     "category": "Custom"
+    }
+ ]
+}
+{% endschema %}
