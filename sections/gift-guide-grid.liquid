@@ -8,7 +8,8 @@
                 {%  if product_id != blank %}
                     {% assign product = all_products[product_id] %}
                    <div class="gift-grid-item">
-                   <img src="{{ product.featured_image | image_url: width: 500, height: 500, crop: 'center' }}"
+                   <img 
+                    src="{{ product.featured_image | image_url: width: 500, height: 500, crop: 'center' }}"
                    alt="{{ product.title }}"
                    class="gift-grid-image"
                 >
