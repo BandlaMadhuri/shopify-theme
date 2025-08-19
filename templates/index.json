@@ -82,7 +82,7 @@
       "settings": {
         "heading": "The Gift Guide",
         "subtext": "Find the perfect gifts for your loved ones",
-        "button_link": "",
+        "button_link": "shopify://products/red-sports-tee",
         "background": "shopify://shop_images/womens-red-t-shirt_925x_5cbc9e3a-3e59-4707-aa55-d1483ba0349a.jpg"
       }
     },
