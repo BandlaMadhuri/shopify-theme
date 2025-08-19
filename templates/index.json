@@ -90,12 +90,12 @@
       "type": "gift-guide-grid",
       "name": "Gift Guide Grid",
       "settings": {
-        "product_1": "",
-        "product_2": "",
-        "product_3": "",
-        "product_4": "",
-        "product_5": "",
-        "product_6": ""
+        "product_1": "black-leather-bag",
+        "product_2": "blue-silk-tuxedo",
+        "product_3": "chequered-red-shirt",
+        "product_4": "classic-varsity-top",
+        "product_5": "classic-leather-jacket",
+        "product_6": "floral-white-top"
       }
     }
   },
